@@ -1,0 +1,12 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+
+<h1>Olá!</h1><br/>
+<div class="lead">
+  <p>Seja bem vindo a Biblioteca!</p><br/>
+</div>
+<% if user_signed_in? %>
+<p><%= link_to "Lista de Livros", books_path, class:"btn btn-md btn-primary bg-dark border-white" %></p>
+<%= link_to "Log-out", destroy_user_session_path, class:"btn btn-md btn-secondary" %>
+<% else %>
+<%= link_to "Log-in", new_user_session_path, class:"btn btn-lg btn-secondary" %>
+<% end %>
